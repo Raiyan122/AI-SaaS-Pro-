@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Authorization Gateway — NeuroFlow AI Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .auth-split-canvas-layout-wrapper { display: flex; width: 100vw; height: 100vh; background-color: var(--bg-app); }
+        .auth-form-column-panel-container { width: 460px; height: 100%; padding: 60px 40px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border-subtle); background: var(--bg-surface-solid); flex-shrink: 0; }
+        .auth-graphics-visual-projection-column { flex: 1; height: 100%; background: radial-gradient(circle at center, rgba(124,58,237,0.08) 0%, transparent 70%); display: flex; align-items: center; justify-content: center; position: relative; }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <div class="auth-split-canvas-layout-wrapper">
+        <div class="auth-form-column-panel-container">
+            <div style="margin-bottom: 32px;">
+                <a href="../index.html" class="brand-anchor-link">
+                    <div class="brand-core-cube"></div>
+                    <span>NeuroFlow <span class="text-gradient-flow">Pro</span></span>
+                </a>
+            </div>
+            
+            <div style="margin-bottom: 24px;">
+                <h2 style="font-family: var(--font-mono); font-size: 1.6rem; margin-bottom: 6px;">Authenticate Operations Session</h2>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Input security identifiers to reconnect your secure network session node proxy.</p>
+            </div>
+
+            <form id="auth-execution-form-gateway" onsubmit="handleAuthSequenceInterception(event)">
+                <div class="form-group">
+                    <label>Identity Routing Email Address</label>
+                    <input type="email" required placeholder="operator@enterprise.io" class="form-input">
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 8px;">
+                        <label style="margin-bottom: 0;">Cryptographic Access Key Passcode</label>
+                    </div>
+                    <input type="password" required placeholder="••••••••••••" class="form-input">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" style="margin-top: 12px;">Verify Security Signature Node</button>
+            </form>
+
+            <p style="margin-top: 24px; text-align: center; font-size: 0.875rem; color: var(--text-muted);">
+                Unregistered Identity Node? <a href="register.html" style="color: var(--brand-cyan); text-decoration: none;">Request Workspace Space Cluster</a>
+            </p>
+        </div>
+        <div class="auth-graphics-visual-projection-column">
+            <div class="glass-card" style="padding: 32px; width: 400px; text-align: left;">
+                <div style="font-family: var(--font-mono); color: var(--brand-cyan); font-size: 0.75rem; margin-bottom: 8px;">// SECURITY STATEMENT RUNTIME STATUS</div>
+                <p style="font-size: 0.88rem; line-height: 1.5; color: var(--text-body);">Multi-tenant data extraction matrices isolation configurations are cryptographically deployed actively during current sessions framework execution parameters.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleAuthSequenceInterception(e) {
+            e.preventDefault();
+            alert("Security matrix verified. Allocating local data space proxy routing tables... Redirecting to master workstation.");
+            window.location.href = "../dashboard/dashboard.html";
+        }
+    </script>
+</body>
+</html>
