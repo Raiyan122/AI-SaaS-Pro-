@@ -1,0 +1,193 @@
+/**
+ * NeuroFlow AI Pro - Unified Custom UI Components Framework
+ */
+
+/* ==========================================================================
+   1. Buttons Framework
+   ========================================================================== */
+.btn {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: var(--brand-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 16px 0 var(--accent-glow-cyan), var(--shadow-inset);
+}
+.btn-primary:hover {
+    background: var(--brand-gradient-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px 0 rgba(6, 182, 212, 0.3), var(--shadow-inset);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--border-medium);
+    color: var(--text-main);
+    box-shadow: var(--shadow-inset);
+}
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--border-heavy);
+}
+
+.btn-sm { padding: 6px 14px; font-size: 0.8rem; border-radius: var(--radius-sm); }
+.btn-lg { padding: 14px 28px; font-size: 1rem; border-radius: var(--radius-lg); }
+.btn-full { width: 100%; }
+
+/* ==========================================================================
+   2. Glassmorphic Panel Systems (Cards)
+   ========================================================================== */
+.glass-card {
+    background: var(--bg-surface);
+    backdrop-filter: blur(var(--glass-blur)) saturate(130%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(130%);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-main), var(--shadow-inset);
+    transition: border-color var(--transition-normal), transform var(--transition-normal);
+}
+.glass-card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-heavy);
+}
+
+/* ==========================================================================
+   3. Accordion (FAQ System)
+   ========================================================================== */
+.accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+.accordion-node {
+    overflow: hidden;
+    background: var(--bg-surface-solid);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+.accordion-trigger {
+    width: 100%;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+.accordion-icon {
+    transition: transform var(--transition-normal);
+    color: var(--text-muted);
+}
+.accordion-pane {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal) ease-out, padding var(--transition-normal);
+    padding: 0 24px;
+    color: var(--text-body);
+    font-size: 0.937rem;
+    line-height: 1.6;
+}
+.accordion-node.is-expanded .accordion-pane {
+    max-height: 300px;
+    padding-bottom: 20px;
+}
+.accordion-node.is-expanded .accordion-icon {
+    transform: rotate(180deg);
+    color: var(--brand-cyan);
+}
+
+/* ==========================================================================
+   4. Interactive Tabs Structure
+   ========================================================================== */
+.tabs-container { width: 100%; }
+.tabs-header-bar {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-medium);
+    margin-bottom: 32px;
+}
+.tab-trigger-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 12px 16px;
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+.tab-trigger-btn:hover { color: var(--text-main); }
+.tab-trigger-btn.is-active { color: var(--brand-cyan); }
+.tab-trigger-btn.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; width: 100%; height: 2px;
+    background: var(--brand-cyan);
+}
+.tab-view-pane { display: none; }
+.tab-view-pane.is-active { display: block; animation: contentFadeIn 0.4s var(--ease-out-expo); }
+
+@keyframes contentFadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   5. Dynamic Toast System Notification Architecture
+   ========================================================================== */
+#toast-container {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+    pointer-events: none;
+}
+.toast-msg {
+    pointer-events: auto;
+    min-width: 320px;
+    max-width: 420px;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    background: #0a0b12;
+    border-left: 4px solid var(--brand-cyan);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    animation: toastSlideIn var(--transition-normal) forwards;
+}
+.toast-msg.danger { border-left-color: var(--color-danger); }
+.toast-msg.success { border-left-color: var(--color-success); }
+
+@keyframes toastSlideIn {
+    from { transform: translateX(100%) translateY(0); opacity: 0; }
+    to { transform: translateX(0) translateY(0); opacity: 1; }
+}
