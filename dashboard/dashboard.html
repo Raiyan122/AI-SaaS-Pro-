@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations Telemetry Overview Control Workstation — NeuroFlow AI Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dark-theme">
+
+    <div class="dashboard-root-wrapper">
+        <aside class="sidebar-navigation-panel">
+            <a href="../index.html" class="sidebar-logo-zone">
+                <div class="brand-core-cube"></div>
+                <span>NeuroFlow <span class="text-gradient-flow">Pro</span></span>
+            </a>
+            <ul class="sidebar-links-list">
+                <li><a href="dashboard.html" class="sidebar-nav-item-link is-active"><i class="fa-solid fa-chart-pie"></i> Telemetry Metrics</a></li>
+                <li><a href="ai-chat.html" class="sidebar-nav-item-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Cognitive Agent Shell</a></li>
+                <li><a href="../index.html" class="sidebar-nav-item-link logout-link-override" style="margin-top: 40px; color: var(--color-danger);"><i class="fa-solid fa-power-off"></i> Disconnect Session</a></li>
+            </ul>
+        </aside>
+
+        <main class="workstation-container">
+            <header class="workstation-top-navbar">
+                <div class="workstation-titlebar-identity-block">
+                    <h2 style="font-family: var(--font-mono); font-size: 1.25rem;">Core Resource Cluster Workstation Overview</h2>
+                </div>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);"><span style="width:6px; height:6px; background:var(--color-success); display:inline-block; border-radius:50%; margin-right:4px;"></span> Node-Primary Live Token Stream</div>
+                    <div style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff;">AV</div>
+                </div>
+            </header>
+
+            <div class="workstation-viewport-scroll-frame">
+                <div class="telemetry-dashboard-grid">
+                    <div class="glass-card widget-metric-card">
+                        <div class="widget-label-row"><span>Token Burn Consumption (Current Billing Period)</span> <i class="fa-solid fa-bolt text-cyan"></i></div>
+                        <div class="widget-large-numeric">14,802,419</div>
+                        <div class="widget-trend-subtext positive-yield"><i class="fa-solid fa-arrow-trend-up"></i> Tracking at 24.2% total tier capacity allocation limits</div>
+                    </div>
+                    <div class="glass-card widget-metric-card">
+                        <div class="widget-label-row"><span>Mean Inference Pipeline Execution Velocity Latency</span> <i class="fa-solid fa-gauge-high" style="color: var(--brand-purple)"></i></div>
+                        <div class="widget-large-numeric">8.14 ms</div>
+                        <div class="widget-trend-subtext text-muted">Optimized 1.04ms over baseline profiles</div>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="padding: 32px;">
+                    <h3 style="font-family: var(--font-mono); font-size: 1.1rem; margin-bottom: 20px;">Recent System Execution Loop Sequences Logs</h3>
+                    <div class="data-table-container">
+                        <table class="production-data-table">
+                            <thead>
+                                <tr>
+                                    <th>Thread Runtime Execution Code Hash</th>
+                                    <th>Foundation Engine Context Model Target</th>
+                                    <th>Data Processing Status Indicator</th>
+                                    <th>Timestamp Baseline Target Parameter</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>tx_88f2_901c</code></td>
+                                    <td><span style="font-size:0.75rem; background:rgba(255,255,255,0.04); padding:4px 8px; border-radius:4px; font-family:var(--font-mono)">neuroflow-ultra-3.0</span></td>
+                                    <td><span class="status-pill status-success" style="color:var(--color-success); font-weight:600;"><i class="fa-solid fa-circle-check"></i> Complete Verification</span></td>
+                                    <td style="color:var(--text-muted); font-size:0.8rem;">2026-06-16 14:12:02</td>
+                                </tr>
+                                <tr>
+                                    <td><code>tx_01a9_44b1</code></td>
+                                    <td><span style="font-size:0.75rem; background:rgba(255,255,255,0.04); padding:4px 8px; border-radius:4px; font-family:var(--font-mono)">neuroflow-flash-light</span></td>
+                                    <td><span class="status-pill status-success" style="color:var(--color-success); font-weight:600;"><i class="fa-solid fa-circle-check"></i> Complete Verification</span></td>
+                                    <td style="color:var(--text-muted); font-size:0.8rem;">2026-06-16 13:58:19</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
