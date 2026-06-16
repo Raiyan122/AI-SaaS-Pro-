@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Capabilities & Features — NeuroFlow AI Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark-theme">
+
+    <section class="layout-container" style="padding-top: 140px;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <span class="system-pill-badge">Deep Technology Configuration Specs</span>
+            <h1 style="font-family: var(--font-mono); font-size: 3rem; margin-top: 12px;">Engineered for High-Velocity Production Loops</h1>
+        </div>
+
+        <div class="glass-card tabs-container" style="padding: 40px;">
+            <div class="tabs-header-bar">
+                <button class="tab-trigger-btn is-active" data-target="inference-tab">Inference Core Routing</button>
+                <button class="tab-trigger-btn" data-target="guardrails-tab">Cryptographic Guardrails</button>
+            </div>
+            <div class="tabs-display-viewport-content-frame">
+                <div class="tab-view-pane is-active" id="inference-tab">
+                    <h2 style="font-family: var(--font-mono); margin-bottom: 16px;">Automated Context Load Optimization Layer Routing</h2>
+                    <p style="color: var(--text-body); line-height: 1.6; max-width: 800px;">Optimize structural operating overhead parameters dynamically. The underlying infrastructure engine intercepts incoming telemetry instructions, routing parameters selectively across specific foundational nodes based on cost tracking profiles and token consumption parameters.</p>
+                </div>
+                <div class="tab-view-pane" id="guardrails-tab">
+                    <h2 style="font-family: var(--font-mono); margin-bottom: 16px;">Sovereign Security Sandbox Context Shield Interceptors</h2>
+                    <p style="color: var(--text-body); line-height: 1.6; max-width: 800px;">Scrub unauthorized context modification attempts, data injection threats, and memory pollution requests in real-time before data packages touch the internal storage layers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/theme.js"></script>
+    <script>
+        // Tab Matrix Logic Interlock Trigger Factories
+        document.querySelectorAll('.tab-trigger-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parentTabsContainer = btn.closest('.tabs-container');
+                parentTabsContainer.querySelectorAll('.tab-trigger-btn').forEach(t => t.classList.remove('is-active'));
+                parentTabsContainer.querySelectorAll('.tab-view-pane').forEach(p => p.classList.remove('is-active'));
+                
+                btn.classList.add('is-active');
+                const selectedTargetId = btn.getAttribute('data-target');
+                parentTabsContainer.querySelector('#' + selectedTargetId).classList.add('is-active');
+            });
+        });
+    </script>
+</body>
+</html>
